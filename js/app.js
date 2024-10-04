@@ -111,6 +111,17 @@ function resetGame() {
 }
  init(); 
 /*----------------------------- Event Listeners -----------------------------*/
+
+playBtnEl.addEventListener('click', () => handleStatReset('boredom'));
+feedBtnEl.addEventListener('click', () => handleStatReset('hunger'));
+sleepBtnEl.addEventListener('click', () => handleStatReset('sleepiness'));
+
+resetBtnEl.addEventListener('click', () => {
+  init();
+});
+
+
+/*
 document.querySelector('#Boredom').addEventListener('click', boredom);
 document.querySelector('#hunger').addEventListener('click', hunger);
 document.querySelector('#sleep').addEventListener('click', sleepiness);
@@ -119,3 +130,4 @@ document.querySelector('#sleep').addEventListener('click', sleepiness);
 document.querySelectorAll('button').forEach(function (button) {
     button.addEventListener('click', init);
   });
+*/
